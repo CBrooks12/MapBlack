@@ -38,13 +38,7 @@ function initMap() {
 		stylers: [
 		  { visibility: "on" }
 		]
-	  }/**,{
-		featureType: "landscape.natural.terrain",
-		elementType: "all",
-		stylers: [
-		  {"color": "#222222"}
-		]
-	  }**/
+	  }
 	];
   map = new google.maps.Map(document.getElementById('map'), {
     center: {
@@ -52,8 +46,8 @@ function initMap() {
       lng: -123.086
     },
 	styles: styleArray,
-    zoom: 12
+    zoom: 8
   });
-	//var trafficLayer = new google.maps.TrafficLayer();
-	//trafficLayer.setMap(map);
+	var trafficLayer = new google.maps.TrafficLayer();
+	trafficLayer.setMap(map);
 }

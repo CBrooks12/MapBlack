@@ -2,7 +2,7 @@ var fxml_url = 'http://cbrooks4:e4e205799a31cb95274d38b3d502596b06f3f66c@flightx
 
 // When the button is clicked, fetch the details about the entered flight ident.
 $(document).ready(function(){
-	for(i=0;i<1000;i+=15){
+	for(i=0;i<100;i+=15){
 		$.ajax({
 			type: 'GET',
 			url: fxml_url + 'Search',
@@ -22,7 +22,7 @@ $(document).ready(function(){
 						fillOpacity: 0.35,
 						map: map,
 						center: {lat: aircraft.latitude, lng: aircraft.longitude},
-						radius: 10000
+						radius: 7000
 					});
 				}
 				console.log(result);
